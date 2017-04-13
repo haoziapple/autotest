@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:lang="http://www.springframework.org/schema/lang"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/aop
+        http://www.springframework.org/schema/aop/spring-aop-4.2.xsd
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context-4.2.xsd
+        http://www.springframework.org/schema/mvc
+        http://www.springframework.org/schema/mvc/spring-mvc-4.2.xsd
+        http://www.springframework.org/schema/tx
+        http://www.springframework.org/schema/tx/spring-tx-4.2.xsd">
+
+<!-- 	<bean id="testService" class="com.ybn.order.service.test.TestService" /> -->
+
+<!-- 	<bean id="httpSystemService" -->
+<!-- 		class="org.springframework.remoting.httpinvoker.HttpInvokerServiceExporter"> -->
+<!-- 		<property name="service" ref="testService" /> -->
+<!-- 		<property name="serviceInterface" value="com.ybn.order.intf.TestInter" /> -->
+<!-- 	</bean> -->
+
+<!-- 	<bean id="urlMapping" -->
+<!-- 		class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping"> -->
+<!-- 		<property name="mappings"> -->
+<!-- 			<props> -->
+<!-- 				<prop key="/httpSystemService">httpSystemService</prop> -->
+<!-- 			</props> -->
+<!-- 		</property> -->
+<!-- 	</bean> -->
+
+</beans>

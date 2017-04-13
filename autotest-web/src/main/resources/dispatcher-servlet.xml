@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:lang="http://www.springframework.org/schema/lang"
+	xsi:schemaLocation="http://www.springframework.org/schema/aop   
+        http://www.springframework.org/schema/aop/spring-aop-4.2.xsd
+        http://www.springframework.org/schema/beans   
+        http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
+        http://www.springframework.org/schema/context   
+        http://www.springframework.org/schema/context/spring-context-4.2.xsd
+        http://www.springframework.org/schema/mvc   
+        http://www.springframework.org/schema/mvc/spring-mvc-4.2.xsd
+        http://www.springframework.org/schema/tx   
+        http://www.springframework.org/schema/tx/spring-tx-4.2.xsd">
+
+	<mvc:annotation-driven>
+		<mvc:message-converters>
+			<bean class="org.springframework.http.converter.StringHttpMessageConverter">
+				<property name="supportedMediaTypes">
+					<list>
+						<value>text/plain;charset=UTF-8</value>
+						<value>text/html;charset=UTF-8</value>
+					</list>
+				</property>
+			</bean>
+		</mvc:message-converters>
+	</mvc:annotation-driven>
+
+	<!-- spring上下文工具类(用于获取spring容器中的bean) -->
+	<!-- 供MQ组件调用，不使用MQ组件时注释掉 -->
+	<!-- <bean id="springContextUtil" class="com.fzrj.schedule.client.util.SpringContextUtil" -->
+	<!-- scope="singleton" /> -->
+
+
+	<!--注解说明 -->
+	<context:annotation-config />
+	<context:component-scan base-package="com.fzrj.pay.autotest" />
+
+	<!-- 远程操作定时任务 -->
+	<bean id="jobService"
+		class="org.springframework.remoting.httpinvoker.HttpInvokerProxyFactoryBean">
+		<property name="serviceUrl" value="${http.remote.jobService}" />
+		<property name="serviceInterface"
+			value="com.aquatic.schedule.service.remote.JobService" />
+	</bean>
+
+	<bean id="exampleBean"
+		class="com.fzrj.pay.autotest.web.springtest.dynamicbean.ExampleBean">
+		<property name="name" ref="beanNameHelper" />
+	</bean>
+
+	<bean id="beanNameHelper"
+		class="org.springframework.beans.factory.config.MethodInvokingFactoryBean">
+		<property name="targetClass"
+			value="com.fzrj.pay.autotest.web.springtest.dynamicbean.ExampleBeanHelper" />
+		<property name="targetMethod" value="getName" />
+	</bean>
+</beans>

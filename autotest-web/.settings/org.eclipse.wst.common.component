@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="autotest_web">
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
+        <wb-resource deploy-path="/" source-path="/target/m2e-wtp/web-resources"/>
+        <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
+        <dependent-module archiveName="schedule-service-1.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/schedule-service/schedule-service">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="schedule-dao-1.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/schedule-dao/schedule-dao">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="autotest-service-1.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/autotest-service/autotest-service">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="autotest-bmo-1.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/autotest-bmo/autotest-bmo">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="autotest-dao-1.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/autotest-dao/autotest-dao">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="autotest-util-1.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/autotest-util/autotest-util">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="schedule_client-1.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/schedule_client/schedule_client">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="schedule_bean-1.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/schedule_bean/schedule_bean">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="autotest-intf-1.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/autotest-intf/autotest-intf">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="autotest-bean-1.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/autotest-bean/autotest-bean">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <property name="java-output-path" value="/autotest-web/target/classes"/>
+        <property name="context-root" value="autotest_web"/>
+    </wb-module>
+</project-modules>

@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.fzrj.pay</groupId>
+		<artifactId>autotest-system</artifactId>
+		<version>1.0.0</version>
+	</parent>
+
+	<artifactId>autotest-bmo</artifactId>
+	<packaging>jar</packaging>
+
+	<name>autotest-bmo</name>
+	<url>http://maven.apache.org</url>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-remoting</artifactId>
+			<version>2.0.8</version>
+		</dependency>
+		<dependency>
+			<groupId>com.fzrj.pay</groupId>
+			<artifactId>autotest-dao</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.fzrj.pay</groupId>
+			<artifactId>autotest-util</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+		<!-- 远程定时任务操作 -->
+		<dependency>
+			<groupId>com.aquatic.schedule</groupId>
+			<artifactId>schedule-service</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+	</dependencies>
+	<repositories>
+		<repository>
+			<id>nexus</id>
+			<name>Team Nexus Repository</name>
+			<url>http://10.108.26.220:8081/nexus/content/groups/public</url>
+		</repository>
+	</repositories>
+	<pluginRepositories>
+		<pluginRepository>
+			<id>nexus</id>
+			<name>Team Nexus Repository</name>
+			<url>http://10.108.26.220:8081/nexus/content/groups/public</url>
+		</pluginRepository>
+	</pluginRepositories>
+</project>
